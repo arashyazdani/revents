@@ -3,6 +3,7 @@ import { Grid } from 'semantic-ui-react';
 import EventForm from '../eventForm/EventForm';
 import EventList from './EventList';
 import {sampleData} from '../../../app/api/sampleData';
+import { Container } from 'semantic-ui-react';
 
 export default function EventDahboard({formOpen, setFormOpen, selectEvent, selectedEvent}) {
     const [events, setEvents] = useState(sampleData);
@@ -21,6 +22,7 @@ export default function EventDahboard({formOpen, setFormOpen, selectEvent, selec
     }
 
     return (
+        // <Container className='main'>
         <Grid>
             <Grid.Column width={10}>
                 <EventList 
@@ -41,5 +43,6 @@ export default function EventDahboard({formOpen, setFormOpen, selectEvent, selec
                 />)}
             </Grid.Column>
         </Grid>
+        // </Container>
     )
 }
